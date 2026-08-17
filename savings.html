@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finova | Savings</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            FIN<span>OVA</span>
+        </div>
+
+
+        <nav>
+
+            <a href="index.html" class="nav-link">
+                <span>▣</span>
+                Dashboard
+            </a>
+
+            <a href="transactions.html" class="nav-link">
+                <span>↔</span>
+                Transactions
+            </a>
+
+            <a href="budget.html" class="nav-link">
+                <span>◉</span>
+                Budget
+            </a>
+
+            <a href="analytics.html" class="nav-link">
+                <span>◒</span>
+                Analytics
+            </a>
+
+            <a href="savings.html" class="nav-link active">
+                <span>◇</span>
+                Savings
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-link">
+                <span>⚙</span>
+                Settings
+            </a>
+
+
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    H
+                </div>
+
+                <div>
+
+                    <strong>
+                        Hanin
+                    </strong>
+
+                    <small>
+                        Personal Account
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="welcome">
+                    Build your future 🎯
+                </p>
+
+                <h1>
+                    Savings Goals
+                </h1>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="icon-btn">
+                    🔔
+                </button>
+
+
+                <button class="user-btn">
+
+                    <div class="profile-avatar">
+                        H
+                    </div>
+
+                    <span>
+                        Hanin
+                    </span>
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= SAVINGS STATS ================= -->
+
+        <section class="stats">
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Total Saved
+                    </span>
+
+                    <span class="stat-icon savings">
+                        $
+                    </span>
+
+                </div>
+
+
+                <h2 id="totalSaved">
+                    $5,280
+                </h2>
+
+
+                <p class="positive">
+                    ↑ 15.8%
+                    <span>
+                        this year
+                    </span>
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Active Goals
+                    </span>
+
+                    <span class="stat-icon">
+                        🎯
+                    </span>
+
+                </div>
+
+
+                <h2 id="activeGoals">
+                    4
+                </h2>
+
+
+                <p>
+                    Goals in progress
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Remaining
+                    </span>
+
+                    <span class="stat-icon expense">
+                        ◇
+                    </span>
+
+                </div>
+
+
+                <h2 id="remainingSavings">
+                    $3,720
+                </h2>
+
+
+                <p>
+                    To reach all goals
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Completion
+                    </span>
+
+                    <span class="stat-icon income">
+                        ✓
+                    </span>
+
+                </div>
+
+
+                <h2>
+                    59%
+                </h2>
+
+
+                <p class="positive">
+                    Overall progress
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GOALS HEADER ================= -->
+
+        <div class="page-section-header">
+
+            <div>
+
+                <h2>
+                    Your Goals
+                </h2>
+
+                <p>
+                    Track your progress and reach your dreams.
+                </p>
+
+            </div>
+
+
+            <button
+                class="primary-btn"
+                id="openGoalModal">
+
+                + Create Goal
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= SAVINGS GRID ================= -->
+
+        <section class="savings-grid">
+
+
+            <!-- GOAL 1 -->
+
+            <div class="goal-card-large dashboard-card">
+
+                <div class="goal-card-top">
+
+                    <div class="goal-big-icon laptop">
+                        💻
+                    </div>
+
+
+                    <button class="goal-menu">
+                        ⋮
+                    </button>
+
+                </div>
+
+
+                <div class="goal-card-content">
+
+                    <span class="goal-status active-status">
+                        IN PROGRESS
+                    </span>
+
+
+                    <h3>
+                        New Laptop
+                    </h3>
+
+
+                    <p>
+                        MacBook / Gaming Laptop
+                    </p>
+
+
+                    <div class="goal-money">
+
+                        <strong>
+                            $800
+                        </strong>
+
+                        <span>
+                            of $1,200
+                        </span>
+
+                    </div>
+
+
+                    <div class="goal-progress-large">
+
+                        <div
+                            style="width:67%;"
+                            class="goal-progress-fill">
+                        </div>
+
+                    </div>
+
+
+                    <div class="goal-progress-info">
+
+                        <span>
+                            67% complete
+                        </span>
+
+                        <span>
+                            $400 left
+                        </span>
+
+                    </div>
+
+
+                    <div class="goal-date">
+
+                        <span>
+                            📅 Target date
+                        </span>
+
+                        <strong>
+                            Dec 2026
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        class="add-money-btn"
+                        data-goal="Laptop">
+
+                        + Add Money
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GOAL 2 -->
+
+            <div class="goal-card-large dashboard-card">
+
+                <div class="goal-card-top">
+
+                    <div class="goal-big-icon travel">
+                        ✈️
+                    </div>
+
+
+                    <button class="goal-menu">
+                        ⋮
+                    </button>
+
+                </div>
+
+
+                <div class="goal-card-content">
+
+                    <span class="goal-status active-status">
+                        IN PROGRESS
+                    </span>
+
+
+                    <h3>
+                        Dream Trip
+                    </h3>
+
+
+                    <p>
+                        Travel & Adventure
+                    </p>
+
+
+                    <div class="goal-money">
+
+                        <strong>
+                            $1,450
+                        </strong>
+
+                        <span>
+                            of $3,000
+                        </span>
+
+                    </div>
+
+
+                    <div class="goal-progress-large">
+
+                        <div
+                            style="width:48%;"
+                            class="goal-progress-fill">
+                        </div>
+
+                    </div>
+
+
+                    <div class="goal-progress-info">
+
+                        <span>
+                            48% complete
+                        </span>
+
+                        <span>
+                            $1,550 left
+                        </span>
+
+                    </div>
+
+
+                    <div class="goal-date">
+
+                        <span>
+                            📅 Target date
+                        </span>
+
+                        <strong>
+                            Jun 2027
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        class="add-money-btn"
+                        data-goal="Travel">
+
+                        + Add Money
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GOAL 3 -->
+
+            <div class="goal-card-large dashboard-card">
+
+                <div class="goal-card-top">
+
+                    <div class="goal-big-icon car">
+                        🚗
+                    </div>
+
+
+                    <button class="goal-menu">
+                        ⋮
+                    </button>
+
+                </div>
+
+
+                <div class="goal-card-content">
+
+                    <span class="goal-status active-status">
+                        IN PROGRESS
+                    </span>
+
+
+                    <h3>
+                        New Car
+                    </h3>
+
+
+                    <p>
+                        First personal car
+                    </p>
+
+
+                    <div class="goal-money">
+
+                        <strong>
+                            $2,500
+                        </strong>
+
+                        <span>
+                            of $8,000
+                        </span>
+
+                    </div>
+
+
+                    <div class="goal-progress-large">
+
+                        <div
+                            style="width:31%;"
+                            class="goal-progress-fill">
+                        </div>
+
+                    </div>
+
+
+                    <div class="goal-progress-info">
+
+                        <span>
+                            31% complete
+                        </span>
+
+                        <span>
+                            $5,500 left
+                        </span>
+
+                    </div>
+
+
+                    <div class="goal-date">
+
+                        <span>
+                            📅 Target date
+                        </span>
+
+                        <strong>
+                            Dec 2028
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        class="add-money-btn"
+                        data-goal="Car">
+
+                        + Add Money
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GOAL 4 -->
+
+            <div class="goal-card-large dashboard-card">
+
+                <div class="goal-card-top">
+
+                    <div class="goal-big-icon emergency">
+                        🛡️
+                    </div>
+
+
+                    <button class="goal-menu">
+                        ⋮
+                    </button>
+
+                </div>
+
+
+                <div class="goal-card-content">
+
+                    <span class="goal-status completed-status">
+                        COMPLETED
+                    </span>
+
+
+                    <h3>
+                        Emergency Fund
+                    </h3>
+
+
+                    <p>
+                        Financial safety net
+                    </p>
+
+
+                    <div class="goal-money">
+
+                        <strong>
+                            $2,000
+                        </strong>
+
+                        <span>
+                            of $2,000
+                        </span>
+
+                    </div>
+
+
+                    <div class="goal-progress-large">
+
+                        <div
+                            style="width:100%;"
+                            class="goal-progress-fill completed">
+                        </div>
+
+                    </div>
+
+
+                    <div class="goal-progress-info">
+
+                        <span>
+                            100% complete
+                        </span>
+
+                        <span>
+                            🎉 Completed
+                        </span>
+
+                    </div>
+
+
+                    <div class="goal-date">
+
+                        <span>
+                            ✓ Completed
+                        </span>
+
+                        <strong>
+                            Aug 2026
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        class="add-money-btn completed-button">
+
+                        Goal Completed ✓
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SAVINGS STRATEGY ================= -->
+
+        <section class="dashboard-card savings-strategy">
+
+
+            <div class="card-header">
+
+                <div>
+
+                    <h3>
+                        Savings Strategy
+                    </h3>
+
+                    <p>
+                        Simple ways to reach your goals faster
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="strategy-grid">
+
+
+                <div class="strategy">
+
+                    <div class="strategy-icon">
+                        📅
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Save monthly
+                        </strong>
+
+                        <p>
+                            Put aside at least $300 every
+                            month to stay on track.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="strategy">
+
+                    <div class="strategy-icon">
+                        💳
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Automate savings
+                        </strong>
+
+                        <p>
+                            Set automatic transfers after
+                            receiving your income.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="strategy">
+
+                    <div class="strategy-icon">
+                        📉
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Reduce expenses
+                        </strong>
+
+                        <p>
+                            Cutting unnecessary expenses
+                            can speed up your goals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- ================= CREATE GOAL MODAL ================= -->
+
+<div
+    class="modal-overlay"
+    id="goalModal">
+
+
+    <div class="modal">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>
+                    Create Savings Goal
+                </h2>
+
+                <p>
+                    What are you saving for?
+                </p>
+
+            </div>
+
+
+            <button
+                class="close-modal"
+                id="closeGoalModal">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+
+        <form id="goalForm">
+
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label>
+                    Goal Name
+                </label>
+
+                <input
+                    type="text"
+                    id="goalName"
+                    placeholder="e.g. New Phone"
+                    required>
+
+            </div>
+
+
+
+            <!-- TARGET -->
+
+            <div class="form-group">
+
+                <label>
+                    Target Amount
+                </label>
+
+
+                <div class="amount-input">
+
+                    <span>
+                        $
+                    </span>
+
+
+                    <input
+                        type="number"
+                        id="goalAmount"
+                        placeholder="1000"
+                        min="1"
+                        required>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CURRENT -->
+
+            <div class="form-group">
+
+                <label>
+                    Current Savings
+                </label>
+
+
+                <div class="amount-input">
+
+                    <span>
+                        $
+                    </span>
+
+
+                    <input
+                        type="number"
+                        id="goalCurrent"
+                        placeholder="0"
+                        min="0"
+                        value="0"
+                        required>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DATE -->
+
+            <div class="form-group">
+
+                <label>
+                    Target Date
+                </label>
+
+
+                <input
+                    type="date"
+                    id="goalDate"
+                    required>
+
+            </div>
+
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                Create Goal
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= ADD MONEY MODAL ================= -->
+
+<div
+    class="modal-overlay"
+    id="moneyModal">
+
+
+    <div class="modal">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>
+                    Add Money
+                </h2>
+
+                <p>
+                    Add money to your savings goal
+                </p>
+
+            </div>
+
+
+            <button
+                class="close-modal"
+                id="closeMoneyModal">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+
+        <form id="moneyForm">
+
+
+            <div class="form-group">
+
+                <label>
+                    Amount
+                </label>
+
+
+                <div class="amount-input">
+
+                    <span>
+                        $
+                    </span>
+
+
+                    <input
+                        type="number"
+                        id="moneyAmount"
+                        placeholder="100"
+                        min="1"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                Add to Goal
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

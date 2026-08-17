@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finova | Budget</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            FIN<span>OVA</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html" class="nav-link">
+                <span>▣</span>
+                Dashboard
+            </a>
+
+            <a href="transactions.html" class="nav-link">
+                <span>↔</span>
+                Transactions
+            </a>
+
+            <a href="budget.html" class="nav-link active">
+                <span>◉</span>
+                Budget
+            </a>
+
+            <a href="analytics.html" class="nav-link">
+                <span>◒</span>
+                Analytics
+            </a>
+
+            <a href="savings.html" class="nav-link">
+                <span>◇</span>
+                Savings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-link">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    H
+                </div>
+
+                <div>
+                    <strong>Hanin</strong>
+                    <small>Personal Account</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+
+                <p class="welcome">
+                    Plan your spending 📊
+                </p>
+
+                <h1>
+                    Monthly Budget
+                </h1>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="icon-btn">
+                    🔔
+                </button>
+
+                <button class="user-btn">
+
+                    <div class="profile-avatar">
+                        H
+                    </div>
+
+                    <span>
+                        Hanin
+                    </span>
+
+                    <span>
+                        ⌄
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- BUDGET OVERVIEW -->
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Monthly Budget
+                    </span>
+
+                    <span class="stat-icon">
+                        💰
+                    </span>
+
+                </div>
+
+                <h2>
+                    $3,000
+                </h2>
+
+                <p>
+                    August 2026
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Spent
+                    </span>
+
+                    <span class="stat-icon expense">
+                        ↘
+                    </span>
+
+                </div>
+
+                <h2>
+                    $1,840
+                </h2>
+
+                <p class="positive">
+                    61.3% used
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <span>
+                        Remaining
+                    </span>
+
+                    <span class="stat-icon savings">
+                        $
+                    </span>
+
+                </div>
+
+                <h2>
+                    $1,160
+                </h2>
+
+                <p class="positive">
+                    38.7% remaining
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BUDGET CONTENT -->
+        <section class="budget-layout">
+
+
+            <!-- LEFT -->
+            <div class="dashboard-card budget-main">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Budget Categories
+                        </h3>
+
+                        <p>
+                            Track your spending limits
+                        </p>
+
+                    </div>
+
+                    <button
+                        class="primary-btn"
+                        id="addBudgetBtn">
+
+                        + Add Budget
+
+                    </button>
+
+                </div>
+
+
+                <!-- FOOD -->
+                <div class="budget-item">
+
+                    <div class="budget-item-header">
+
+                        <div class="budget-category">
+
+                            <div class="budget-icon food-bg">
+                                🍔
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Food & Dining
+                                </strong>
+
+                                <small>
+                                    $589 spent
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="budget-amount">
+
+                            <strong>
+                                $589 / $700
+                            </strong>
+
+                            <span>
+                                84%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-progress">
+
+                        <div
+                            class="budget-progress-fill warning"
+                            style="width:84%;">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-footer">
+
+                        <span>
+                            $111 remaining
+                        </span>
+
+                        <span class="warning-text">
+                            Almost reached
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SHOPPING -->
+                <div class="budget-item">
+
+                    <div class="budget-item-header">
+
+                        <div class="budget-category">
+
+                            <div class="budget-icon shopping-bg">
+                                🛍
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Shopping
+                                </strong>
+
+                                <small>
+                                    $442 spent
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="budget-amount">
+
+                            <strong>
+                                $442 / $600
+                            </strong>
+
+                            <span>
+                                74%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-progress">
+
+                        <div
+                            class="budget-progress-fill"
+                            style="width:74%;">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-footer">
+
+                        <span>
+                            $158 remaining
+                        </span>
+
+                        <span>
+                            On track
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TRANSPORT -->
+                <div class="budget-item">
+
+                    <div class="budget-item-header">
+
+                        <div class="budget-category">
+
+                            <div class="budget-icon transport-bg">
+                                🚗
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Transport
+                                </strong>
+
+                                <small>
+                                    $331 spent
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="budget-amount">
+
+                            <strong>
+                                $331 / $500
+                            </strong>
+
+                            <span>
+                                66%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-progress">
+
+                        <div
+                            class="budget-progress-fill"
+                            style="width:66%;">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-footer">
+
+                        <span>
+                            $169 remaining
+                        </span>
+
+                        <span>
+                            On track
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BILLS -->
+                <div class="budget-item">
+
+                    <div class="budget-item-header">
+
+                        <div class="budget-category">
+
+                            <div class="budget-icon bills-bg">
+                                📄
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Bills
+                                </strong>
+
+                                <small>
+                                    $276 spent
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="budget-amount">
+
+                            <strong>
+                                $276 / $400
+                            </strong>
+
+                            <span>
+                                69%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-progress">
+
+                        <div
+                            class="budget-progress-fill"
+                            style="width:69%;">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-footer">
+
+                        <span>
+                            $124 remaining
+                        </span>
+
+                        <span>
+                            On track
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OTHER -->
+                <div class="budget-item">
+
+                    <div class="budget-item-header">
+
+                        <div class="budget-category">
+
+                            <div class="budget-icon other-bg">
+                                📦
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Other
+                                </strong>
+
+                                <small>
+                                    $202 spent
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="budget-amount">
+
+                            <strong>
+                                $202 / $400
+                            </strong>
+
+                            <span>
+                                51%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-progress">
+
+                        <div
+                            class="budget-progress-fill"
+                            style="width:51%;">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="budget-footer">
+
+                        <span>
+                            $198 remaining
+                        </span>
+
+                        <span>
+                            On track
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+            <div class="budget-side">
+
+
+                <!-- BUDGET HEALTH -->
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Budget Health
+                            </h3>
+
+                            <p>
+                                Your spending status
+                            </p>
+
+                        </div>
+
+                        <span class="health-icon">
+                            ✓
+                        </span>
+
+                    </div>
+
+
+                    <div class="health-score">
+
+                        <div class="score-circle">
+
+                            <strong>
+                                82
+                            </strong>
+
+                            <span>
+                                /100
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="health-status">
+
+                        <strong>
+                            Great job! 🎉
+                        </strong>
+
+                        <p>
+                            You're spending within your
+                            planned limits.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SPENDING TIP -->
+                <div class="dashboard-card tip-card">
+
+                    <div class="tip-icon">
+                        💡
+                    </div>
+
+                    <h3>
+                        Smart Tip
+                    </h3>
+
+                    <p>
+                        You're spending more on food
+                        than last month. Try setting a
+                        weekly food limit to stay on track.
+                    </p>
+
+                    <button>
+                        Create food limit
+                    </button>
+
+                </div>
+
+
+                <!-- QUICK BUDGET -->
+                <div class="dashboard-card">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Quick Budget
+                            </h3>
+
+                            <p>
+                                Set your monthly limit
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-budget">
+
+                        <label>
+                            Monthly limit
+                        </label>
+
+                        <div class="quick-input">
+
+                            <span>
+                                $
+                            </span>
+
+                            <input
+                                type="number"
+                                value="3000"
+                                id="monthlyBudget">
+
+                        </div>
+
+                        <button
+                            class="submit-btn"
+                            id="saveBudget">
+
+                            Save Budget
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ADD BUDGET MODAL -->
+
+<div
+    class="modal-overlay"
+    id="budgetModal">
+
+    <div class="modal">
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2>
+                    Add Budget
+                </h2>
+
+                <p>
+                    Create a spending limit
+                </p>
+
+            </div>
+
+            <button
+                class="close-modal"
+                id="closeBudgetModal">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <form id="budgetForm">
+
+
+            <div class="form-group">
+
+                <label>
+                    Category
+                </label>
+
+                <select
+                    id="budgetCategory"
+                    required>
+
+                    <option value="">
+                        Select category
+                    </option>
+
+                    <option value="food">
+                        🍔 Food & Dining
+                    </option>
+
+                    <option value="shopping">
+                        🛍 Shopping
+                    </option>
+
+                    <option value="transport">
+                        🚗 Transport
+                    </option>
+
+                    <option value="bills">
+                        📄 Bills
+                    </option>
+
+                    <option value="other">
+                        📦 Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Monthly Limit
+                </label>
+
+                <div class="amount-input">
+
+                    <span>
+                        $
+                    </span>
+
+                    <input
+                        type="number"
+                        id="budgetAmount"
+                        placeholder="500"
+                        min="1"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                Create Budget
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

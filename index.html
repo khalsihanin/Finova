@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finova | Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            FIN<span>OVA</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html" class="nav-link active">
+                <span>▣</span>
+                Dashboard
+            </a>
+
+            <a href="transactions.html" class="nav-link">
+                <span>↔</span>
+                Transactions
+            </a>
+
+            <a href="budget.html" class="nav-link">
+                <span>◉</span>
+                Budget
+            </a>
+
+            <a href="analytics.html" class="nav-link">
+                <span>◒</span>
+                Analytics
+            </a>
+
+            <a href="savings.html" class="nav-link">
+                <span>◇</span>
+                Savings
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-link">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    H
+                </div>
+
+                <div>
+                    <strong>Hanin</strong>
+                    <small>Personal Account</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+                <p class="welcome">Good afternoon 👋</p>
+                <h1>Financial Overview</h1>
+            </div>
+
+            <div class="top-actions">
+
+                <button class="icon-btn">
+                    🔔
+                </button>
+
+                <button class="user-btn">
+                    <div class="profile-avatar">
+                        H
+                    </div>
+
+                    <span>Hanin</span>
+
+                    <span>⌄</span>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- STAT CARDS -->
+        <section class="stats">
+
+            <div class="stat-card balance-card">
+
+                <div class="stat-top">
+                    <span>Total Balance</span>
+                    <span class="stat-icon">💰</span>
+                </div>
+
+                <h2 id="balance">$8,420.00</h2>
+
+                <p class="positive">
+                    ↑ 12.5% <span>from last month</span>
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span>Total Income</span>
+                    <span class="stat-icon income">↗</span>
+                </div>
+
+                <h2 id="income">$3,200.00</h2>
+
+                <p class="positive">
+                    ↑ 8.2% <span>from last month</span>
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span>Total Expenses</span>
+                    <span class="stat-icon expense">↘</span>
+                </div>
+
+                <h2 id="expenses">$1,840.00</h2>
+
+                <p class="negative">
+                    ↓ 4.6% <span>from last month</span>
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span>Total Savings</span>
+                    <span class="stat-icon savings">◇</span>
+                </div>
+
+                <h2>$5,280.00</h2>
+
+                <p class="positive">
+                    ↑ 15.8% <span>from last month</span>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTENT GRID -->
+        <section class="dashboard-grid">
+
+
+            <!-- CHART -->
+            <div class="dashboard-card chart-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Income & Expenses</h3>
+                        <p>Financial activity this year</p>
+                    </div>
+
+                    <select id="chartFilter">
+                        <option>2026</option>
+                        <option>2025</option>
+                        <option>2024</option>
+                    </select>
+
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="financeChart"></canvas>
+                </div>
+
+            </div>
+
+
+            <!-- EXPENSE BREAKDOWN -->
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Expense Breakdown</h3>
+                        <p>Where your money goes</p>
+                    </div>
+
+                    <a href="analytics.html" class="view-link">
+                        View all
+                    </a>
+
+                </div>
+
+                <div class="expense-content">
+
+                    <div class="donut-container">
+                        <canvas id="expenseChart"></canvas>
+
+                        <div class="donut-center">
+                            <strong>1,840</strong>
+                            <span>Total</span>
+                        </div>
+                    </div>
+
+
+                    <div class="expense-list">
+
+                        <div class="expense-item">
+
+                            <span class="category-dot food"></span>
+
+                            <div>
+                                <strong>Food</strong>
+                                <small>32%</small>
+                            </div>
+
+                            <b>$589</b>
+
+                        </div>
+
+
+                        <div class="expense-item">
+
+                            <span class="category-dot shopping"></span>
+
+                            <div>
+                                <strong>Shopping</strong>
+                                <small>24%</small>
+                            </div>
+
+                            <b>$442</b>
+
+                        </div>
+
+
+                        <div class="expense-item">
+
+                            <span class="category-dot transport"></span>
+
+                            <div>
+                                <strong>Transport</strong>
+                                <small>18%</small>
+                            </div>
+
+                            <b>$331</b>
+
+                        </div>
+
+
+                        <div class="expense-item">
+
+                            <span class="category-dot bills"></span>
+
+                            <div>
+                                <strong>Bills</strong>
+                                <small>15%</small>
+                            </div>
+
+                            <b>$276</b>
+
+                        </div>
+
+
+                        <div class="expense-item">
+
+                            <span class="category-dot other"></span>
+
+                            <div>
+                                <strong>Other</strong>
+                                <small>11%</small>
+                            </div>
+
+                            <b>$202</b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECENT TRANSACTIONS -->
+            <div class="dashboard-card transactions-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Recent Transactions</h3>
+                        <p>Your latest financial activity</p>
+                    </div>
+
+                    <a href="transactions.html" class="view-link">
+                        View all
+                    </a>
+
+                </div>
+
+
+                <div class="transaction-table">
+
+                    <div class="transaction-row">
+
+                        <div class="transaction-info">
+
+                            <div class="transaction-icon food-icon">
+                                🍔
+                            </div>
+
+                            <div>
+                                <strong>Restaurant</strong>
+                                <small>Food • Today</small>
+                            </div>
+
+                        </div>
+
+                        <strong class="amount expense-amount">
+                            -$45.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="transaction-row">
+
+                        <div class="transaction-info">
+
+                            <div class="transaction-icon shopping-icon">
+                                🛍
+                            </div>
+
+                            <div>
+                                <strong>Shopping</strong>
+                                <small>Shopping • Yesterday</small>
+                            </div>
+
+                        </div>
+
+                        <strong class="amount expense-amount">
+                            -$120.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="transaction-row">
+
+                        <div class="transaction-info">
+
+                            <div class="transaction-icon income-icon">
+                                💼
+                            </div>
+
+                            <div>
+                                <strong>Salary</strong>
+                                <small>Income • Aug 15</small>
+                            </div>
+
+                        </div>
+
+                        <strong class="amount income-amount">
+                            +$2,800.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="transaction-row">
+
+                        <div class="transaction-info">
+
+                            <div class="transaction-icon transport-icon">
+                                🚗
+                            </div>
+
+                            <div>
+                                <strong>Fuel</strong>
+                                <small>Transport • Aug 14</small>
+                            </div>
+
+                        </div>
+
+                        <strong class="amount expense-amount">
+                            -$60.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SAVINGS GOAL -->
+            <div class="dashboard-card goal-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Savings Goal</h3>
+                        <p>Your biggest goal</p>
+                    </div>
+
+                    <span class="goal-icon">
+                        🎯
+                    </span>
+
+                </div>
+
+
+                <div class="goal-info">
+
+                    <div class="goal-title">
+
+                        <div>
+                            <strong>New Laptop</strong>
+                            <small>Target: $1,200</small>
+                        </div>
+
+                        <strong>$800</strong>
+
+                    </div>
+
+
+                    <div class="progress">
+
+                        <div class="progress-bar" style="width: 67%;">
+                        </div>
+
+                    </div>
+
+
+                    <div class="goal-footer">
+
+                        <span>67% completed</span>
+
+                        <span>$400 remaining</span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="savings.html" class="goal-button">
+                    Manage savings
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
